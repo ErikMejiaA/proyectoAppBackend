@@ -1,5 +1,6 @@
 using Core.Entities;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata;
 
 namespace Infrastructure.Data.Configuration;
 
@@ -12,6 +13,7 @@ public class UsuarioConfiguration : IEntityTypeConfiguration<Usuario>
         builder.ToTable("usuario");
 
         builder.Property(p => p.Usu_id)
+        .HasAnnotation("MySql : ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn)
         .IsRequired();
 
         builder.Property(p => p.Usu_nombre)

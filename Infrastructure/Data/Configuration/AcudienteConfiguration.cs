@@ -1,5 +1,6 @@
 using Core.Entities;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace Infrastructure.Data.Configuration;
@@ -13,6 +14,7 @@ public class AcudienteConfiguration : IEntityTypeConfiguration<Acudiente>
         builder.ToTable("acudiente");
 
         builder.Property(p => p.Acu_codigo)
+        .HasAnnotation("MySql : ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn)
         .IsRequired();
 
         builder.Property(p => p.Acu_nombreCompleto)

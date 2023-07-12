@@ -1,5 +1,6 @@
 using Core.Entities;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata;
 
 namespace Infrastructure.Data.Configuration;
 
@@ -12,6 +13,7 @@ public class Estado_citaConfiguration : IEntityTypeConfiguration<Estado_cita>
         builder.ToTable("estado_cita");
 
         builder.Property(p => p.Estcita_id)
+        .HasAnnotation("MySql : ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn)
         .IsRequired();
 
         builder.Property(p => p.Estcita_nombre)

@@ -1,5 +1,6 @@
 using Core.Entities;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace Infrastructure.Data.Configuration;
@@ -13,6 +14,7 @@ public class CitasConfiguration : IEntityTypeConfiguration<Cita>
         builder.ToTable("cita");
 
         builder.Property(p => p.Cit_codigo)
+        .HasAnnotation("MySql : ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn)
         .IsRequired();
 
         builder.Property(p => p.Cit_fecha)

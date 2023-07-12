@@ -1,5 +1,6 @@
 using Core.Entities;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace Infrastructure.Data.Configuration;
@@ -13,6 +14,7 @@ public class EspecialidadConfiguration : IEntityTypeConfiguration<Especialidad>
         builder.ToTable("espesialidad");
 
         builder.Property(p => p.Esp_id)
+        .HasAnnotation("MySql : ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn)
         .IsRequired();
 
         builder.Property(p => p.Esp_nombre)

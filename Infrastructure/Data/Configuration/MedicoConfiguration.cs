@@ -1,5 +1,6 @@
 using Core.Entities;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata;
 
 namespace Infrastructure.Data.Configuration;
 
@@ -12,6 +13,7 @@ public class MedicoConfiguration : IEntityTypeConfiguration<Medico>
         builder.ToTable("medico");
 
         builder.Property(p => p.Med_nroMatriculaProfesional)
+        .HasAnnotation("MySql : ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn)
         .IsRequired();
 
         builder.Property(p => p.Med_nombreCompleto)
