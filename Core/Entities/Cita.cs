@@ -8,7 +8,7 @@ public class Cita
     [Key]
     public int Cit_codigo { get; set; }
     public DateTime Cit_fecha { get; set; }
-    public int Cit_estado { get; set; }
+    public int Cit_estadoCita { get; set; }
     public int Cit_medico { get; set; }
     public int Cit_datoUsuario { get; set; }
 

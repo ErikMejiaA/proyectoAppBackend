@@ -8,6 +8,11 @@ public class Consultorio
     [Key]
     public int Cons_codigo { get; set; }
     public string ? Cons_nombre { get; set; }
+    
+    //definimos las ICollection
+    public ICollection<Medico> ? Medicos { get; set; }
+    
+        
 
         
 }

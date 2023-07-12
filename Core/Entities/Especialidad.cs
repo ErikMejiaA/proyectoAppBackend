@@ -8,6 +8,9 @@ public class Especialidad
     [Key]
     public int Esp_id { get; set; }
     public string ? Esp_nombre { get; set; }
+
+    //definimos las ICollection
+    public ICollection<Medico> ? Medicos { get; set; }
     
         
 }
