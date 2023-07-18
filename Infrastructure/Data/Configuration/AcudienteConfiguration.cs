@@ -14,8 +14,9 @@ public class AcudienteConfiguration : IEntityTypeConfiguration<Acudiente>
         builder.ToTable("acudiente");
 
         builder.Property(p => p.Acu_codigo)
-        .HasAnnotation("MySql : ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn)
-        .IsRequired();
+        //.HasAnnotation("MySql : ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn)
+        .IsRequired()
+        .ValueGeneratedNever();
 
         builder.Property(p => p.Acu_nombreCompleto)
         .IsRequired()

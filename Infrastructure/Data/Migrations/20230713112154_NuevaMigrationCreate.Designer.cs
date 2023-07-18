@@ -11,21 +11,20 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Infrastructure.Data.Migrations
 {
     [DbContext(typeof(proyectoAppBackendContext))]
-    [Migration("20230712133421_InitialCreate")]
-    partial class InitialCreate
+    [Migration("20230713112154_NuevaMigrationCreate")]
+    partial class NuevaMigrationCreate
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "7.0.8")
+                .HasAnnotation("ProductVersion", "7.0.9")
                 .HasAnnotation("Relational:MaxIdentifierLength", 64);
 
             modelBuilder.Entity("Core.Entities.Acudiente", b =>
                 {
                     b.Property<int>("Acu_codigo")
-                        .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
                     b.Property<string>("Acu_direccion")
@@ -51,7 +50,6 @@ namespace Infrastructure.Data.Migrations
             modelBuilder.Entity("Core.Entities.Cita", b =>
                 {
                     b.Property<int>("Cit_codigo")
-                        .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
                     b.Property<int>("Cit_datoUsuario")
@@ -80,7 +78,6 @@ namespace Infrastructure.Data.Migrations
             modelBuilder.Entity("Core.Entities.Consultorio", b =>
                 {
                     b.Property<int>("Cons_codigo")
-                        .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
                     b.Property<string>("Cons_nombre")
@@ -96,7 +93,6 @@ namespace Infrastructure.Data.Migrations
             modelBuilder.Entity("Core.Entities.Especialidad", b =>
                 {
                     b.Property<int>("Esp_id")
-                        .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
                     b.Property<string>("Esp_nombre")
@@ -112,7 +108,6 @@ namespace Infrastructure.Data.Migrations
             modelBuilder.Entity("Core.Entities.Estado_cita", b =>
                 {
                     b.Property<int>("Estcita_id")
-                        .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
                     b.Property<string>("Estcita_nombre")
@@ -128,7 +123,6 @@ namespace Infrastructure.Data.Migrations
             modelBuilder.Entity("Core.Entities.Genero", b =>
                 {
                     b.Property<int>("Gen_id")
-                        .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
                     b.Property<string>("Gen_abreviatura")
@@ -149,7 +143,6 @@ namespace Infrastructure.Data.Migrations
             modelBuilder.Entity("Core.Entities.Medico", b =>
                 {
                     b.Property<int>("Med_nroMatriculaProfesional")
-                        .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
                     b.Property<int>("Med_consultorio")
@@ -175,7 +168,6 @@ namespace Infrastructure.Data.Migrations
             modelBuilder.Entity("Core.Entities.Tipo_documento", b =>
                 {
                     b.Property<int>("Tipdoc_id")
-                        .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
                     b.Property<string>("Tipdoc_abreviatura")
@@ -196,7 +188,6 @@ namespace Infrastructure.Data.Migrations
             modelBuilder.Entity("Core.Entities.Usuario", b =>
                 {
                     b.Property<int>("Usu_id")
-                        .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
                     b.Property<int>("Usu_acudiente")

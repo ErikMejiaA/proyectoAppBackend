@@ -1,6 +1,8 @@
 # proyectoAppBackend
 proyecto de preactica Entity Framework, Conexion a base de datos 
 
+ (Base de Datos de Citas Medicas)
+
 pasos llevados a cavo 
 
 1. Creaccion del repositoria en git y luego su clonacion en el ecritorio, utilizando el comado:
@@ -49,9 +51,15 @@ pasos llevados a cavo
 
 => copiamos el siguiente comando para poder enviar las entidades
 protected override void OnModelCreating(ModelBuilder modelBuilder)
-   {
-       base.OnModelCreating(modelBuilder);
-       modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
-   }
+    {
+        base.OnModelCreating(modelBuilder);
+        modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
+    }
+
+   internal void SaveAsync()
+    {
+        throw new NotImplementedException();
+    }
+
 
 15. creamos una variable de conexion a la base datos

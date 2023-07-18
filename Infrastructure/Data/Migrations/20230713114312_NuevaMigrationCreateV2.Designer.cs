@@ -3,7 +3,6 @@ using System;
 using Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
-using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
@@ -12,23 +11,21 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Infrastructure.Data.Migrations
 {
     [DbContext(typeof(proyectoAppBackendContext))]
-    [Migration("20230712143045_InitialCreateV1")]
-    partial class InitialCreateV1
+    [Migration("20230713114312_NuevaMigrationCreateV2")]
+    partial class NuevaMigrationCreateV2
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "7.0.8")
+                .HasAnnotation("ProductVersion", "7.0.9")
                 .HasAnnotation("Relational:MaxIdentifierLength", 64);
 
             modelBuilder.Entity("Core.Entities.Acudiente", b =>
                 {
                     b.Property<int>("Acu_codigo")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("MySql : ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn);
+                        .HasColumnType("int");
 
                     b.Property<string>("Acu_direccion")
                         .IsRequired()
@@ -53,9 +50,7 @@ namespace Infrastructure.Data.Migrations
             modelBuilder.Entity("Core.Entities.Cita", b =>
                 {
                     b.Property<int>("Cit_codigo")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("MySql : ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn);
+                        .HasColumnType("int");
 
                     b.Property<int>("Cit_datoUsuario")
                         .HasColumnType("int");
@@ -83,9 +78,7 @@ namespace Infrastructure.Data.Migrations
             modelBuilder.Entity("Core.Entities.Consultorio", b =>
                 {
                     b.Property<int>("Cons_codigo")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("MySql : ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn);
+                        .HasColumnType("int");
 
                     b.Property<string>("Cons_nombre")
                         .IsRequired()
@@ -100,9 +93,7 @@ namespace Infrastructure.Data.Migrations
             modelBuilder.Entity("Core.Entities.Especialidad", b =>
                 {
                     b.Property<int>("Esp_id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("MySql : ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn);
+                        .HasColumnType("int");
 
                     b.Property<string>("Esp_nombre")
                         .IsRequired()
@@ -117,9 +108,7 @@ namespace Infrastructure.Data.Migrations
             modelBuilder.Entity("Core.Entities.Estado_cita", b =>
                 {
                     b.Property<int>("Estcita_id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("MySql : ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn);
+                        .HasColumnType("int");
 
                     b.Property<string>("Estcita_nombre")
                         .IsRequired()
@@ -134,9 +123,7 @@ namespace Infrastructure.Data.Migrations
             modelBuilder.Entity("Core.Entities.Genero", b =>
                 {
                     b.Property<int>("Gen_id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("MySql : ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn);
+                        .HasColumnType("int");
 
                     b.Property<string>("Gen_abreviatura")
                         .IsRequired()
@@ -156,9 +143,7 @@ namespace Infrastructure.Data.Migrations
             modelBuilder.Entity("Core.Entities.Medico", b =>
                 {
                     b.Property<int>("Med_nroMatriculaProfesional")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("MySql : ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn);
+                        .HasColumnType("int");
 
                     b.Property<int>("Med_consultorio")
                         .HasColumnType("int");
@@ -183,9 +168,7 @@ namespace Infrastructure.Data.Migrations
             modelBuilder.Entity("Core.Entities.Tipo_documento", b =>
                 {
                     b.Property<int>("Tipdoc_id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("MySql : ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn);
+                        .HasColumnType("int");
 
                     b.Property<string>("Tipdoc_abreviatura")
                         .IsRequired()
@@ -205,9 +188,7 @@ namespace Infrastructure.Data.Migrations
             modelBuilder.Entity("Core.Entities.Usuario", b =>
                 {
                     b.Property<int>("Usu_id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("MySql : ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn);
+                        .HasColumnType("int");
 
                     b.Property<int>("Usu_acudiente")
                         .HasColumnType("int");

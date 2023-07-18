@@ -14,8 +14,9 @@ public class Tipo_documentoConfiguration : IEntityTypeConfiguration<Tipo_documen
         builder.ToTable("tipo_documento");
 
         builder.Property(p => p.Tipdoc_id)
-        .HasAnnotation("MySql : ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn)
-        .IsRequired();
+        //.HasAnnotation("MySql : ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn)
+        .IsRequired()
+        .ValueGeneratedNever();
 
         builder.Property(p => p.Tipodoc_nombre)
         .IsRequired()

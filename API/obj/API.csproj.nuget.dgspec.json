@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Campus Lat\\programasEntityFrameworkNETCore\\proyectoAppBackend\\API\\API.csproj": {}
+    "d:\\Campus Lat\\programasEntityFrameworkNETCore\\proyectoAppBackend\\API\\API.csproj": {}
   },
   "projects": {
-    "D:\\Campus Lat\\programasEntityFrameworkNETCore\\proyectoAppBackend\\API\\API.csproj": {
+    "d:\\Campus Lat\\programasEntityFrameworkNETCore\\proyectoAppBackend\\API\\API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Campus Lat\\programasEntityFrameworkNETCore\\proyectoAppBackend\\API\\API.csproj",
+        "projectUniqueName": "d:\\Campus Lat\\programasEntityFrameworkNETCore\\proyectoAppBackend\\API\\API.csproj",
         "projectName": "API",
-        "projectPath": "D:\\Campus Lat\\programasEntityFrameworkNETCore\\proyectoAppBackend\\API\\API.csproj",
+        "projectPath": "d:\\Campus Lat\\programasEntityFrameworkNETCore\\proyectoAppBackend\\API\\API.csproj",
         "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
-        "outputPath": "D:\\Campus Lat\\programasEntityFrameworkNETCore\\proyectoAppBackend\\API\\obj\\",
+        "outputPath": "d:\\Campus Lat\\programasEntityFrameworkNETCore\\proyectoAppBackend\\API\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Usuario\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -20,15 +20,14 @@
           "net7.0"
         ],
         "sources": {
-          "C:\\Program Files\\dotnet\\sdk\\7.0.304\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "D:\\Campus Lat\\programasEntityFrameworkNETCore\\proyectoAppBackend\\Infrastructure\\Infrastructure.csproj": {
-                "projectPath": "D:\\Campus Lat\\programasEntityFrameworkNETCore\\proyectoAppBackend\\Infrastructure\\Infrastructure.csproj"
+              "d:\\Campus Lat\\programasEntityFrameworkNETCore\\proyectoAppBackend\\Infrastructure\\Infrastructure.csproj": {
+                "projectPath": "d:\\Campus Lat\\programasEntityFrameworkNETCore\\proyectoAppBackend\\Infrastructure\\Infrastructure.csproj"
               }
             }
           }
@@ -85,14 +84,14 @@
         }
       }
     },
-    "D:\\Campus Lat\\programasEntityFrameworkNETCore\\proyectoAppBackend\\Core\\Core.csproj": {
+    "d:\\Campus Lat\\programasEntityFrameworkNETCore\\proyectoAppBackend\\Core\\Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Campus Lat\\programasEntityFrameworkNETCore\\proyectoAppBackend\\Core\\Core.csproj",
+        "projectUniqueName": "d:\\Campus Lat\\programasEntityFrameworkNETCore\\proyectoAppBackend\\Core\\Core.csproj",
         "projectName": "Core",
-        "projectPath": "D:\\Campus Lat\\programasEntityFrameworkNETCore\\proyectoAppBackend\\Core\\Core.csproj",
+        "projectPath": "d:\\Campus Lat\\programasEntityFrameworkNETCore\\proyectoAppBackend\\Core\\Core.csproj",
         "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
-        "outputPath": "D:\\Campus Lat\\programasEntityFrameworkNETCore\\proyectoAppBackend\\Core\\obj\\",
+        "outputPath": "d:\\Campus Lat\\programasEntityFrameworkNETCore\\proyectoAppBackend\\Core\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Usuario\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -138,14 +137,14 @@
         }
       }
     },
-    "D:\\Campus Lat\\programasEntityFrameworkNETCore\\proyectoAppBackend\\Infrastructure\\Infrastructure.csproj": {
+    "d:\\Campus Lat\\programasEntityFrameworkNETCore\\proyectoAppBackend\\Infrastructure\\Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Campus Lat\\programasEntityFrameworkNETCore\\proyectoAppBackend\\Infrastructure\\Infrastructure.csproj",
+        "projectUniqueName": "d:\\Campus Lat\\programasEntityFrameworkNETCore\\proyectoAppBackend\\Infrastructure\\Infrastructure.csproj",
         "projectName": "Infrastructure",
-        "projectPath": "D:\\Campus Lat\\programasEntityFrameworkNETCore\\proyectoAppBackend\\Infrastructure\\Infrastructure.csproj",
+        "projectPath": "d:\\Campus Lat\\programasEntityFrameworkNETCore\\proyectoAppBackend\\Infrastructure\\Infrastructure.csproj",
         "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
-        "outputPath": "D:\\Campus Lat\\programasEntityFrameworkNETCore\\proyectoAppBackend\\Infrastructure\\obj\\",
+        "outputPath": "d:\\Campus Lat\\programasEntityFrameworkNETCore\\proyectoAppBackend\\Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Usuario\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -160,8 +159,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "D:\\Campus Lat\\programasEntityFrameworkNETCore\\proyectoAppBackend\\Core\\Core.csproj": {
-                "projectPath": "D:\\Campus Lat\\programasEntityFrameworkNETCore\\proyectoAppBackend\\Core\\Core.csproj"
+              "d:\\Campus Lat\\programasEntityFrameworkNETCore\\proyectoAppBackend\\Core\\Core.csproj": {
+                "projectPath": "d:\\Campus Lat\\programasEntityFrameworkNETCore\\proyectoAppBackend\\Core\\Core.csproj"
               }
             }
           }

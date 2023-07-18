@@ -1,20 +1,22 @@
 using Core.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace Infrastructure.Data.Configuration;
 
 public class MedicoConfiguration : IEntityTypeConfiguration<Medico>
 {
-    public void Configure(Microsoft.EntityFrameworkCore.Metadata.Builders.EntityTypeBuilder<Medico> builder)
+    public void Configure(EntityTypeBuilder<Medico> builder)
     {
         //definimos las propiedades a los atributos de la entidad
 
         builder.ToTable("medico");
 
         builder.Property(p => p.Med_nroMatriculaProfesional)
-        .HasAnnotation("MySql : ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn)
-        .IsRequired();
+        //.HasAnnotation("MySql : ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn)
+        .IsRequired()
+        .ValueGeneratedNever();
 
         builder.Property(p => p.Med_nombreCompleto)
         .IsRequired()

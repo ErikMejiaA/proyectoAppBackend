@@ -14,8 +14,9 @@ public class CitasConfiguration : IEntityTypeConfiguration<Cita>
         builder.ToTable("cita");
 
         builder.Property(p => p.Cit_codigo)
-        .HasAnnotation("MySql : ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn)
-        .IsRequired();
+        //.HasAnnotation("MySql : ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn)
+        .IsRequired()
+        .ValueGeneratedNever();
 
         builder.Property(p => p.Cit_fecha)
         .IsRequired()

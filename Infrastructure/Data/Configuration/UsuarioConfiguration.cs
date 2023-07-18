@@ -1,20 +1,22 @@
 using Core.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace Infrastructure.Data.Configuration;
 
 public class UsuarioConfiguration : IEntityTypeConfiguration<Usuario>
 {
-    public void Configure(Microsoft.EntityFrameworkCore.Metadata.Builders.EntityTypeBuilder<Usuario> builder)
+    public void Configure(EntityTypeBuilder<Usuario> builder)
     {
         //definimos las propiedades a los atributos de la entidad
 
         builder.ToTable("usuario");
 
         builder.Property(p => p.Usu_id)
-        .HasAnnotation("MySql : ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn)
-        .IsRequired();
+        //.HasAnnotation("MySql : ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn)
+        .IsRequired()
+        .ValueGeneratedNever();
 
         builder.Property(p => p.Usu_nombre)
         .IsRequired()

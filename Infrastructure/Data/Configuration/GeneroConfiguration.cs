@@ -14,8 +14,9 @@ public class GeneroConfiguration : IEntityTypeConfiguration<Genero>
         builder.ToTable("genero");
 
         builder.Property(p => p.Gen_id)
-        .HasAnnotation("MySql : ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn)
-        .IsRequired();
+        //.HasAnnotation("MySql : ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn)
+        .IsRequired()
+        .ValueGeneratedNever();
 
         builder.Property(p => p.Gen_nombre)
         .IsRequired()

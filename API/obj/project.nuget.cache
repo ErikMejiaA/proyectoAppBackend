@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "3WaKLgxo1WkdtUkTVZTqzvEeLDCGA30/NCre6gCZwMPHTmNx5XKYEHCRJyOgwd3/YyWtunMCIPBddyRoODJMwA==",
+  "dgSpecHash": "XFsqmJkvXWnPn5y+8FaR3NFI566LaP5XDwLNQnMVgzIBod9Hpvj3L0qv4IkRR1F8Sv62fKQdpGfJO8SY0vTElg==",
   "success": true,
-  "projectFilePath": "D:\\Campus Lat\\programasEntityFrameworkNETCore\\proyectoAppBackend\\API\\API.csproj",
+  "projectFilePath": "d:\\Campus Lat\\programasEntityFrameworkNETCore\\proyectoAppBackend\\API\\API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Usuario\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\Usuario\\.nuget\\packages\\microsoft.aspnetcore.openapi\\7.0.8\\microsoft.aspnetcore.openapi.7.0.8.nupkg.sha512",

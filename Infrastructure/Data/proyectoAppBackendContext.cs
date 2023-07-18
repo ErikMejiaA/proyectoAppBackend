@@ -21,9 +21,10 @@ public class proyectoAppBackendContext : DbContext
     public DbSet<Tipo_documento> ? Tipos_Documentos { get; set; }
     public DbSet<Usuario> ? Usuarios { get; set; }
     
-    //Codigo para poder ver las entidades en la vase de datos 
+    //Codigo para poder cargar de forma automatica las configuraciones 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
+        
         base.OnModelCreating(modelBuilder);
         modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
     }

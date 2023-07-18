@@ -14,8 +14,9 @@ public class EspecialidadConfiguration : IEntityTypeConfiguration<Especialidad>
         builder.ToTable("espesialidad");
 
         builder.Property(p => p.Esp_id)
-        .HasAnnotation("MySql : ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn)
-        .IsRequired();
+        //.HasAnnotation("MySql : ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn)
+        .IsRequired()
+        .ValueGeneratedNever();
 
         builder.Property(p => p.Esp_nombre)
         .IsRequired()

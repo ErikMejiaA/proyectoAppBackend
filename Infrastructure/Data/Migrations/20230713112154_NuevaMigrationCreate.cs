@@ -1,5 +1,4 @@
 ﻿using System;
-using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
@@ -7,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace Infrastructure.Data.Migrations
 {
     /// <inheritdoc />
-    public partial class InitialCreate : Migration
+    public partial class NuevaMigrationCreate : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -19,8 +18,7 @@ namespace Infrastructure.Data.Migrations
                 name: "acudiente",
                 columns: table => new
                 {
-                    Acu_codigo = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
+                    Acu_codigo = table.Column<int>(type: "int", nullable: false),
                     Acu_nombreCompleto = table.Column<string>(type: "varchar(100)", maxLength: 100, nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4"),
                     Acu_telefono = table.Column<string>(type: "varchar(100)", maxLength: 100, nullable: false)
@@ -38,8 +36,7 @@ namespace Infrastructure.Data.Migrations
                 name: "consultorio",
                 columns: table => new
                 {
-                    Cons_codigo = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
+                    Cons_codigo = table.Column<int>(type: "int", nullable: false),
                     Cons_nombre = table.Column<string>(type: "varchar(50)", maxLength: 50, nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4")
                 },
@@ -53,8 +50,7 @@ namespace Infrastructure.Data.Migrations
                 name: "espesialidad",
                 columns: table => new
                 {
-                    Esp_id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
+                    Esp_id = table.Column<int>(type: "int", nullable: false),
                     Esp_nombre = table.Column<string>(type: "varchar(20)", maxLength: 20, nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4")
                 },
@@ -68,8 +64,7 @@ namespace Infrastructure.Data.Migrations
                 name: "estado_cita",
                 columns: table => new
                 {
-                    Estcita_id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
+                    Estcita_id = table.Column<int>(type: "int", nullable: false),
                     Estcita_nombre = table.Column<string>(type: "varchar(20)", maxLength: 20, nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4")
                 },
@@ -83,8 +78,7 @@ namespace Infrastructure.Data.Migrations
                 name: "genero",
                 columns: table => new
                 {
-                    Gen_id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
+                    Gen_id = table.Column<int>(type: "int", nullable: false),
                     Gen_nombre = table.Column<string>(type: "varchar(20)", maxLength: 20, nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4"),
                     Gen_abreviatura = table.Column<string>(type: "varchar(20)", maxLength: 20, nullable: false)
@@ -100,8 +94,7 @@ namespace Infrastructure.Data.Migrations
                 name: "tipo_documento",
                 columns: table => new
                 {
-                    Tipdoc_id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
+                    Tipdoc_id = table.Column<int>(type: "int", nullable: false),
                     Tipodoc_nombre = table.Column<string>(type: "varchar(20)", maxLength: 20, nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4"),
                     Tipdoc_abreviatura = table.Column<string>(type: "varchar(20)", maxLength: 20, nullable: false)
@@ -117,8 +110,7 @@ namespace Infrastructure.Data.Migrations
                 name: "medico",
                 columns: table => new
                 {
-                    Med_nroMatriculaProfesional = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
+                    Med_nroMatriculaProfesional = table.Column<int>(type: "int", nullable: false),
                     Med_nombreCompleto = table.Column<string>(type: "varchar(120)", maxLength: 120, nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4"),
                     Med_consultorio = table.Column<int>(type: "int", nullable: false),
@@ -146,8 +138,7 @@ namespace Infrastructure.Data.Migrations
                 name: "usuario",
                 columns: table => new
                 {
-                    Usu_id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
+                    Usu_id = table.Column<int>(type: "int", nullable: false),
                     Usu_nombre = table.Column<string>(type: "varchar(50)", maxLength: 50, nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4"),
                     Usu_segdo_nombre = table.Column<string>(type: "varchar(45)", maxLength: 45, nullable: false)
@@ -194,8 +185,7 @@ namespace Infrastructure.Data.Migrations
                 name: "cita",
                 columns: table => new
                 {
-                    Cit_codigo = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
+                    Cit_codigo = table.Column<int>(type: "int", nullable: false),
                     Cit_fecha = table.Column<DateTime>(type: "datetime", nullable: false),
                     Cit_estadoCita = table.Column<int>(type: "int", nullable: false),
                     Cit_medico = table.Column<int>(type: "int", nullable: false),
